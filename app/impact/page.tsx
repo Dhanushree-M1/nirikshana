@@ -34,11 +34,10 @@ export default function LiveImpact() {
 
       <div className="rounded-3xl shadow-xl overflow-hidden">
         <MapContainer 
-          center={[20, 78]} 
-          zoom={4} 
-          style={{ height: "600px", width: "100%" }}
-          className="rounded-3xl"
-        >
+  {...({ center: [20, 78], zoom: 4 } as any)}
+  style={{ height: "600px", width: "100%" }}
+  className="rounded-3xl"
+>
           <TileLayer 
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
           />
